@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - docker build -t tenkaraimage .
+
+  local:
+    cmds:
+      - docker run -it --rm --name Tenkara -p 80:80 tenkaraimage
